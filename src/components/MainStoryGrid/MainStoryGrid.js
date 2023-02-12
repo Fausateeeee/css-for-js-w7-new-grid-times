@@ -1,17 +1,14 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
 
-import {
-  MAIN_STORY,
-  OPINION_STORIES,
-  SECONDARY_STORIES,
-} from '../../data';
+import { MAIN_STORY, OPINION_STORIES, SECONDARY_STORIES } from "../../data";
 
-import SectionTitle from '../SectionTitle';
-import MainStory from '../MainStory';
-import SecondaryStory from '../SecondaryStory';
-import OpinionStory from '../OpinionStory';
-import Advertisement from '../Advertisement';
+import SectionTitle from "../SectionTitle";
+import MainStory from "../MainStory";
+import SecondaryStory from "../SecondaryStory";
+import OpinionStory from "../OpinionStory";
+import Advertisement from "../Advertisement";
+import { QUERIES } from "../../constants";
 
 const MainStoryGrid = () => {
   return (
@@ -30,11 +27,11 @@ const MainStoryGrid = () => {
 
       <OpinionSection>
         <SectionTitle>Opinion</SectionTitle>
-        <StoryList>
+        <OpinionList>
           {OPINION_STORIES.map((story, index) => (
             <OpinionStory key={story.id} {...story} />
           ))}
-        </StoryList>
+        </OpinionList>
       </OpinionSection>
 
       <AdvertisementSection>
@@ -47,10 +44,10 @@ const MainStoryGrid = () => {
 const Wrapper = styled.div`
   display: grid;
   grid-template-areas:
-    'main-story'
-    'secondary-stories'
-    'opinion-stories'
-    'advertisement';
+    "main-story"
+    "secondary-stories"
+    "opinion-stories"
+    "advertisement";
   gap: 48px;
   margin-bottom: 48px;
 `;
@@ -66,6 +63,14 @@ const SecondaryStorySection = styled.section`
 const StoryList = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const OpinionList = styled(StoryList)`
+  @media (${QUERIES.tabletOnly}) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  } ;
 `;
 
 const OpinionSection = styled.section`
