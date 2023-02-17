@@ -59,7 +59,7 @@ const SuperHeader = styled.div`
 
 const Row = styled(MaxWidthWrapper)`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `;
 
 const ActionGroup = styled.div`

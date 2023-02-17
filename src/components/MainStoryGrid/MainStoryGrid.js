@@ -50,6 +50,14 @@ const Wrapper = styled.div`
     "advertisement";
   gap: 48px;
   margin-bottom: 48px;
+  @media ${QUERIES.laptopAndUp} {
+    width: 100%;
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "main-story secondary-stories opinion-stories"
+      "main-story advertisement advertisement";
+  }
 `;
 
 const MainStorySection = styled.section`
