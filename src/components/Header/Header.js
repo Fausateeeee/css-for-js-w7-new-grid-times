@@ -29,7 +29,19 @@ const Header = () => {
         </Row>
       </SuperHeader>
       <MainHeader>
+        <DesktopActionGroup>
+          <button>
+            <Search size={24} />
+          </button>
+          <button>
+            <Menu size={24} />
+          </button>
+        </DesktopActionGroup>
         <Logo />
+        <SubscribeWrapper>
+          <SubscribeButton>Subscribe</SubscribeButton>
+          <SubscribeLink>Already a subscriber?</SubscribeLink>
+        </SubscribeWrapper>
       </MainHeader>
       <DesktopAction>
         <SubscribeButton>Subscribe</SubscribeButton>
@@ -51,9 +63,15 @@ const SuperHeader = styled.div`
   padding: 16px 0;
   background: var(--color-gray-900);
   color: white;
+<<<<<<< HEAD
   @media (${QUERIES.laptopAndUp}) {
     background-color: transparent;
     color: var(--color-gray-900);
+=======
+
+  @media ${QUERIES.laptopAndUp} {
+    display: none;
+>>>>>>> dev
   }
 `;
 
@@ -91,6 +109,7 @@ const MainHeader = styled(MaxWidthWrapper)`
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
+<<<<<<< HEAD
   @media (${QUERIES.tabletAndUp}) {
     margin-top: 48px;
     margin-bottom: 72px;
@@ -123,6 +142,51 @@ const DesktopLink = styled.a`
   font-family: var(--font-family-serif);
   font-size: ${14 / 16}rem;
   line-height: 22px;
+=======
+
+  @media ${QUERIES.tabletAndUp} {
+    margin-top: 48px;
+    margin-bottom: 72px;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-content: revert;
+    justify-items: start;
+    margin-top: 16px;
+    margin-bottom: 72px;
+  }
+>>>>>>> dev
 `;
 
+const DesktopActionGroup = styled(ActionGroup)`
+  display: none;
+  @media ${QUERIES.laptopAndUp} {
+    display: flex;
+  }
+`;
+
+const SubscribeWrapper = styled.div`
+  display: none;
+  @media ${QUERIES.laptopAndUp} {
+    display: revert;
+    position: relative;
+    justify-self: end;
+  }
+`;
+
+const SubscribeButton = styled(Button)``;
+
+const SubscribeLink = styled.a`
+  position: absolute;
+  font-size: ${14 / 16}rem;
+  margin-top: 8px;
+  width: 100%;
+  color: var(--color-gray-900);
+  text-decoration: underline;
+  text-align: center;
+  font-style: italic;
+`;
 export default Header;

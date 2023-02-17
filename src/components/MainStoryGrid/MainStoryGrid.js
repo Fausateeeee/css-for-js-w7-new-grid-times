@@ -8,7 +8,10 @@ import MainStory from "../MainStory";
 import SecondaryStory from "../SecondaryStory";
 import OpinionStory from "../OpinionStory";
 import Advertisement from "../Advertisement";
+<<<<<<< HEAD
 import { QUERIES } from "../../constants";
+=======
+>>>>>>> dev
 
 const MainStoryGrid = () => {
   return (
@@ -20,7 +23,9 @@ const MainStoryGrid = () => {
       <SecondaryStorySection>
         <StoryList>
           {SECONDARY_STORIES.map((story, index) => (
-            <SecondaryStory key={story.id} {...story} />
+            <SingularStoryWrapper key={story.id}>
+              <SecondaryStory {...story} />
+            </SingularStoryWrapper>
           ))}
         </StoryList>
       </SecondaryStorySection>
@@ -29,7 +34,9 @@ const MainStoryGrid = () => {
         <SectionTitle>Opinion</SectionTitle>
         <OpinionList>
           {OPINION_STORIES.map((story, index) => (
-            <OpinionStory key={story.id} {...story} />
+            <SingularStoryWrapper key={story.id}>
+              <OpinionStory {...story} />
+            </SingularStoryWrapper>
           ))}
         </OpinionList>
       </OpinionSection>
@@ -73,12 +80,21 @@ const StoryList = styled.div`
   flex-direction: column;
 `;
 
+<<<<<<< HEAD
 const OpinionList = styled(StoryList)`
   @media (${QUERIES.tabletOnly}) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
   } ;
+=======
+const SingularStoryWrapper = styled.div`
+  &:not(:last-of-type) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-gray-300);
+    margin-bottom: 16px;
+  }
+>>>>>>> dev
 `;
 
 const OpinionSection = styled.section`

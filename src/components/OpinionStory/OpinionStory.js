@@ -56,13 +56,12 @@ const Avatar = styled.img`
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  grid-area: avatar;
-  align-self: start;
-`;
-
-const ArticleWrapper = styled.div`
-  grid-area: article;
-  width: 100%;
+  float: right;
+  margin-left: 16px;
+  @media ${QUERIES.tabletOnly} {
+    float: revert;
+    margin-left: revert;
+  }
 `;
 
 const AuthorName = styled.p`

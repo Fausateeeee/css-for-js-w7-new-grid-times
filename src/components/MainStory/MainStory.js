@@ -42,11 +42,23 @@ const Abstract = styled.p`
   font-size: 1rem;
   margin-bottom: 1em;
   white-space: pre-wrap;
+<<<<<<< HEAD
 
   @media (${QUERIES.tabletAndUp}) {
     -webkit-line-clamp: 16;
   }
   @media (${QUERIES.laptopAndUp}) {
+=======
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  /* Necessary for line-clamping */
+  overflow: hidden;
+  @media ${QUERIES.tabletAndUp} {
+    -webkit-line-clamp: 16;
+  }
+  @media ${QUERIES.laptopAndUp} {
+>>>>>>> dev
     -webkit-line-clamp: 10;
   }
 `;
