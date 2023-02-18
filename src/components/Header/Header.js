@@ -10,7 +10,7 @@ import Button from "../Button";
 
 const Header = () => {
   return (
-    <Wrapper>
+    <header>
       <SuperHeader>
         <Row>
           <ActionGroup>
@@ -21,11 +21,11 @@ const Header = () => {
               <Menu size={24} />
             </button>
           </ActionGroup>
-          <UserActionGroup>
+          <ActionGroup>
             <button>
               <User size={24} />
             </button>
-          </UserActionGroup>
+          </ActionGroup>
         </Row>
       </SuperHeader>
       <MainHeader>
@@ -43,21 +43,9 @@ const Header = () => {
           <SubscribeLink>Already a subscriber?</SubscribeLink>
         </SubscribeWrapper>
       </MainHeader>
-      <DesktopAction>
-        <SubscribeButton>Subscribe</SubscribeButton>
-        <DesktopLink href="/">Already a subscriber?</DesktopLink>
-      </DesktopAction>
-    </Wrapper>
+    </header>
   );
 };
-
-const Wrapper = styled.header`
-  @media (${QUERIES.laptopAndUp}) {
-    display: flex;
-    align-items: baseline;
-    padding: 0px 122px;
-  }
-`;
 
 const SuperHeader = styled.div`
   padding: 16px 0;
@@ -71,7 +59,7 @@ const SuperHeader = styled.div`
 
 const Row = styled(MaxWidthWrapper)`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
 const ActionGroup = styled.div`
@@ -84,16 +72,6 @@ const ActionGroup = styled.div`
   */
   svg {
     display: block;
-  }
-
-  @media (${QUERIES.laptopAndUp}) {
-    gap: 32px;
-  }
-`;
-
-const UserActionGroup = styled(ActionGroup)`
-  @media (${QUERIES.laptopAndUp}) {
-    display: none;
   }
 `;
 
