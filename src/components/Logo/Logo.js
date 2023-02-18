@@ -2,10 +2,6 @@ import React from "react";
 import styled from "styled-components/macro";
 import format from "date-fns/format";
 import { QUERIES } from "../../constants";
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
 const Logo = (props) => {
   return (
     <Wrapper>
@@ -24,12 +20,8 @@ const Wrapper = styled.div`
 const Link = styled.a`
   font-family: var(--font-family-logo);
   font-size: 3rem;
-<<<<<<< HEAD
-  @media (${QUERIES.tabletAndUp}) {
-=======
 
   @media ${QUERIES.tabletAndUp} {
->>>>>>> dev
     font-size: ${64 / 16}rem;
   }
 `;

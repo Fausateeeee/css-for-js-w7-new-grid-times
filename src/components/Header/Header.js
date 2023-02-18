@@ -63,15 +63,9 @@ const SuperHeader = styled.div`
   padding: 16px 0;
   background: var(--color-gray-900);
   color: white;
-<<<<<<< HEAD
-  @media (${QUERIES.laptopAndUp}) {
-    background-color: transparent;
-    color: var(--color-gray-900);
-=======
 
   @media ${QUERIES.laptopAndUp} {
     display: none;
->>>>>>> dev
   }
 `;
 
@@ -109,40 +103,6 @@ const MainHeader = styled(MaxWidthWrapper)`
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
-<<<<<<< HEAD
-  @media (${QUERIES.tabletAndUp}) {
-    margin-top: 48px;
-    margin-bottom: 72px;
-  }
-  @media (${QUERIES.laptopAndUp}) {
-    margin-top: 16px;
-    margin-bottom: 80px;
-  }
-`;
-
-const DesktopAction = styled.div`
-  display: none;
-  @media (${QUERIES.laptopAndUp}) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-`;
-
-const SubscribeButton = styled(Button)`
-  padding-top: 11px;
-  padding-bottom: 5px;
-`;
-
-const DesktopLink = styled.a`
-  text-decoration: underline;
-  font-style: italic;
-  font-weight: var(--font-weight-normal);
-  font-family: var(--font-family-serif);
-  font-size: ${14 / 16}rem;
-  line-height: 22px;
-=======
 
   @media ${QUERIES.tabletAndUp} {
     margin-top: 48px;
@@ -158,7 +118,6 @@ const DesktopLink = styled.a`
     margin-top: 16px;
     margin-bottom: 72px;
   }
->>>>>>> dev
 `;
 
 const DesktopActionGroup = styled(ActionGroup)`
