@@ -147,6 +147,9 @@ const TopRow = styled.div`
     justify-content: center;
     gap: 48px;
   }
+  @media ${QUERIES.laptopAndUp} {
+    justify-content: flex-end;
+  }
 `;
 
 const Social = styled.div`
